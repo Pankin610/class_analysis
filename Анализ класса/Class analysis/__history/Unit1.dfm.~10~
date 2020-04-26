@@ -1,0 +1,663 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = #1040#1085#1072#1083#1080#1079' '#1082#1083#1072#1089#1089#1072
+  ClientHeight = 1061
+  ClientWidth = 1919
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesigned
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 32
+    Top = 8
+    Width = 115
+    Height = 15
+    Caption = #1057#1086#1094#1080#1086#1084#1077#1090#1088#1080#1103' '#1082#1083#1072#1089#1089#1072
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 929
+    Top = 80
+    Width = 157
+    Height = 13
+    Caption = #1048#1079#1084#1077#1085#1080#1090#1100' '#1086#1076#1085#1086#1089#1090#1086#1088#1086#1085#1085#1102' '#1089#1074#1103#1079#1100
+  end
+  object Label3: TLabel
+    Left = 929
+    Top = 99
+    Width = 163
+    Height = 13
+    Caption = #1052#1091#1078#1076#1091' ('#1085#1086#1084#1077#1088' '#1080#1083#1080' '#1080#1084#1103' '#1091#1095#1077#1085#1080#1082#1072')'
+  end
+  object Label4: TLabel
+    Left = 1201
+    Top = 99
+    Width = 6
+    Height = 13
+    Caption = #1080
+  end
+  object Label5: TLabel
+    Left = 929
+    Top = 126
+    Width = 63
+    Height = 13
+    Caption = #1048#1079#1084#1077#1085#1080#1090#1100' '#1085#1072
+  end
+  object Label6: TLabel
+    Left = 929
+    Top = 200
+    Width = 160
+    Height = 13
+    Caption = #1048#1079#1084#1077#1085#1080#1090#1100' '#1076#1074#1091#1089#1090#1086#1088#1086#1085#1085#1102#1102' '#1089#1074#1103#1079#1100
+  end
+  object Label7: TLabel
+    Left = 929
+    Top = 219
+    Width = 163
+    Height = 13
+    Caption = #1052#1091#1078#1076#1091' ('#1085#1086#1084#1077#1088' '#1080#1083#1080' '#1080#1084#1103' '#1091#1095#1077#1085#1080#1082#1072')'
+  end
+  object Label8: TLabel
+    Left = 1201
+    Top = 219
+    Width = 6
+    Height = 13
+    Caption = #1080
+  end
+  object Label9: TLabel
+    Left = 929
+    Top = 246
+    Width = 63
+    Height = 13
+    Caption = #1048#1079#1084#1077#1085#1080#1090#1100' '#1085#1072
+  end
+  object Label10: TLabel
+    Left = 929
+    Top = 344
+    Width = 142
+    Height = 13
+    Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1091#1095#1077#1085#1080#1082#1072' '#1089' '#1080#1084#1077#1085#1077#1084
+  end
+  object Label11: TLabel
+    Left = 929
+    Top = 367
+    Width = 142
+    Height = 13
+    Caption = #1080' '#1086#1075#1088#1072#1085#1080#1095#1077#1085#1080#1103#1084#1080' '#1087#1086' '#1079#1088#1077#1085#1080#1102
+  end
+  object Label12: TLabel
+    Left = 1322
+    Top = 7
+    Width = 99
+    Height = 15
+    Caption = #1057#1087#1080#1089#1086#1082' '#1091#1095#1077#1085#1080#1082#1086#1074'.'
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label13: TLabel
+    Left = 929
+    Top = 432
+    Width = 236
+    Height = 13
+    Caption = #1048#1079#1084#1077#1085#1080#1090#1100' '#1086#1075#1088#1072#1085#1080#1095#1077#1085#1080#1077' '#1087#1086' '#1079#1088#1077#1085#1080#1102' '#1074#1099#1073#1088#1072#1085#1085#1086#1075#1086
+  end
+  object Label14: TLabel
+    Left = 929
+    Top = 454
+    Width = 57
+    Height = 13
+    Caption = #1091#1095#1077#1085#1080#1082#1072' '#1085#1072
+  end
+  object Label15: TLabel
+    Left = 1322
+    Top = 26
+    Width = 168
+    Height = 15
+    Caption = #1048#1084#1103' | '#1054#1075#1088#1072#1085#1080#1095#1077#1085#1080#1077' '#1087#1086' '#1079#1088#1077#1085#1080#1102
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label16: TLabel
+    Left = 32
+    Top = 26
+    Width = 148
+    Height = 15
+    Caption = #1058#1072#1073#1083#1080#1094#1072' '#1076#1088#1091#1078#1077#1089#1082#1080#1093' '#1089#1074#1103#1079#1077#1081
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label17: TLabel
+    Left = 1568
+    Top = 7
+    Width = 49
+    Height = 15
+    Caption = #1056#1072#1089#1089#1072#1076#1082#1072
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label18: TLabel
+    Left = 1568
+    Top = 26
+    Width = 73
+    Height = 15
+    Caption = #1057#1090#1086#1083' '#1091#1095#1080#1090#1077#1083#1103
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label19: TLabel
+    Left = 1568
+    Top = 411
+    Width = 3
+    Height = 13
+  end
+  object Label20: TLabel
+    Left = 1053
+    Top = 586
+    Width = 3
+    Height = 13
+  end
+  object Label21: TLabel
+    Left = 32
+    Top = 664
+    Width = 3
+    Height = 13
+  end
+  object Label22: TLabel
+    Left = 1811
+    Top = 664
+    Width = 96
+    Height = 13
+    Caption = #1040#1085#1090#1086#1085' '#1040#1084#1077#1083#1080#1095#1077#1074
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label23: TLabel
+    Left = 1827
+    Top = 691
+    Width = 80
+    Height = 13
+    Caption = #1057#1072#1085#1082#1080#1085' '#1055#1072#1074#1077#1083
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label24: TLabel
+    Left = 1755
+    Top = 710
+    Width = 152
+    Height = 13
+    Caption = 'spdeveloper90@gmail.com'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object StringGrid1: TStringGrid
+    AlignWithMargins = True
+    Left = 32
+    Top = 48
+    Width = 891
+    Height = 601
+    ColCount = 37
+    DefaultColWidth = 23
+    DefaultRowHeight = 15
+    RowCount = 37
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 1098
+    Top = 96
+    Width = 97
+    Height = 21
+    TabOrder = 1
+  end
+  object Edit2: TEdit
+    Left = 1213
+    Top = 96
+    Width = 97
+    Height = 21
+    TabOrder = 2
+  end
+  object Edit3: TEdit
+    Left = 998
+    Top = 123
+    Width = 121
+    Height = 21
+    TabOrder = 3
+  end
+  object Edit4: TEdit
+    Left = 1098
+    Top = 216
+    Width = 97
+    Height = 21
+    TabOrder = 4
+  end
+  object Edit5: TEdit
+    Left = 1213
+    Top = 216
+    Width = 97
+    Height = 21
+    TabOrder = 5
+  end
+  object Edit6: TEdit
+    Left = 998
+    Top = 243
+    Width = 121
+    Height = 21
+    TabOrder = 6
+  end
+  object Button1: TButton
+    Left = 929
+    Top = 150
+    Width = 75
+    Height = 25
+    Caption = #1048#1079#1084#1077#1085#1080#1090#1100
+    TabOrder = 7
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 929
+    Top = 270
+    Width = 75
+    Height = 25
+    Caption = #1048#1079#1084#1077#1085#1080#1090#1100
+    TabOrder = 8
+    OnClick = Button2Click
+  end
+  object Edit7: TEdit
+    Left = 1077
+    Top = 341
+    Width = 121
+    Height = 21
+    TabOrder = 9
+  end
+  object Edit8: TEdit
+    Left = 1077
+    Top = 367
+    Width = 121
+    Height = 21
+    TabOrder = 10
+  end
+  object Button3: TButton
+    Left = 929
+    Top = 386
+    Width = 75
+    Height = 25
+    Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+    TabOrder = 11
+    OnClick = Button3Click
+  end
+  object ListBox1: TListBox
+    Left = 1322
+    Top = 48
+    Width = 217
+    Height = 601
+    ItemHeight = 13
+    TabOrder = 12
+  end
+  object Edit9: TEdit
+    Left = 992
+    Top = 451
+    Width = 121
+    Height = 21
+    TabOrder = 13
+  end
+  object Button4: TButton
+    Left = 929
+    Top = 478
+    Width = 75
+    Height = 25
+    Caption = #1048#1079#1084#1077#1085#1080#1090#1100
+    TabOrder = 14
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 1053
+    Top = 586
+    Width = 145
+    Height = 49
+    Caption = #1054#1073#1085#1086#1074#1080#1090#1100' '#1088#1072#1089#1089#1072#1076#1082#1091' '#1080' '#1075#1088#1072#1092#1086#1074#1099#1081' '#1072#1085#1072#1083#1080#1079' '#1082#1083#1072#1089#1089#1072
+    TabOrder = 15
+    WordWrap = True
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    Left = 929
+    Top = 525
+    Width = 176
+    Height = 25
+    Caption = #1059#1076#1072#1083#1080#1090#1100' '#1074#1099#1073#1088#1072#1085#1085#1086#1075#1086' '#1091#1095#1077#1085#1080#1082#1072
+    TabOrder = 16
+    OnClick = Button6Click
+  end
+  object Edit10: TEdit
+    Left = 1568
+    Top = 48
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 17
+  end
+  object Edit11: TEdit
+    Left = 1568
+    Top = 72
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 18
+  end
+  object Edit12: TEdit
+    Left = 1680
+    Top = 48
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 19
+  end
+  object Edit13: TEdit
+    Left = 1680
+    Top = 72
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 20
+  end
+  object Edit14: TEdit
+    Left = 1792
+    Top = 48
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 21
+  end
+  object Edit15: TEdit
+    Left = 1792
+    Top = 72
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 22
+  end
+  object Edit16: TEdit
+    Left = 1568
+    Top = 112
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 23
+  end
+  object Edit17: TEdit
+    Left = 1568
+    Top = 136
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 24
+  end
+  object Edit18: TEdit
+    Left = 1680
+    Top = 112
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 25
+  end
+  object Edit19: TEdit
+    Left = 1680
+    Top = 136
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 26
+  end
+  object Edit20: TEdit
+    Left = 1792
+    Top = 112
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 27
+  end
+  object Edit21: TEdit
+    Left = 1792
+    Top = 136
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 28
+  end
+  object Edit22: TEdit
+    Left = 1568
+    Top = 173
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 29
+  end
+  object Edit23: TEdit
+    Left = 1568
+    Top = 197
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 30
+  end
+  object Edit24: TEdit
+    Left = 1680
+    Top = 173
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 31
+  end
+  object Edit25: TEdit
+    Left = 1680
+    Top = 197
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 32
+  end
+  object Edit26: TEdit
+    Left = 1792
+    Top = 173
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 33
+  end
+  object Edit27: TEdit
+    Left = 1792
+    Top = 197
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 34
+  end
+  object Edit28: TEdit
+    Left = 1568
+    Top = 237
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 35
+  end
+  object Edit29: TEdit
+    Left = 1568
+    Top = 261
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 36
+  end
+  object Edit30: TEdit
+    Left = 1680
+    Top = 237
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 37
+  end
+  object Edit31: TEdit
+    Left = 1680
+    Top = 261
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 38
+  end
+  object Edit32: TEdit
+    Left = 1792
+    Top = 237
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 39
+  end
+  object Edit33: TEdit
+    Left = 1792
+    Top = 261
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 40
+  end
+  object Edit34: TEdit
+    Left = 1568
+    Top = 296
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 41
+  end
+  object Edit35: TEdit
+    Left = 1568
+    Top = 320
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 42
+  end
+  object Edit36: TEdit
+    Left = 1680
+    Top = 296
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 43
+  end
+  object Edit37: TEdit
+    Left = 1680
+    Top = 320
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 44
+  end
+  object Edit38: TEdit
+    Left = 1792
+    Top = 296
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 45
+  end
+  object Edit39: TEdit
+    Left = 1792
+    Top = 320
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 46
+  end
+  object Edit40: TEdit
+    Left = 1568
+    Top = 360
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 47
+  end
+  object Edit41: TEdit
+    Left = 1568
+    Top = 384
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 48
+  end
+  object Edit42: TEdit
+    Left = 1680
+    Top = 360
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 49
+  end
+  object Edit43: TEdit
+    Left = 1680
+    Top = 384
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 50
+  end
+  object Edit44: TEdit
+    Left = 1792
+    Top = 360
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 51
+  end
+  object Edit45: TEdit
+    Left = 1792
+    Top = 384
+    Width = 97
+    Height = 21
+    Enabled = False
+    TabOrder = 52
+  end
+end
