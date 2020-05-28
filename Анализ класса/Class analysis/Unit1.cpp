@@ -602,30 +602,6 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm1::Button3Click(TObject *Sender)
-{
-	if (Edit7->Text == "" || Edit8->Text == "") {
-		ShowMessage("Неправильный формат ввода.");
-		return;
-	}
-	if (n == 36) {
-		ShowMessage("Превышен лимит учеников");
-		return;
-	}
-
-	string Lim  = to_string(Edit8->Text);
-	string Name = to_string(Edit7->Text);
-
-	if (!validLimitation(Lim)) {
-		ShowMessage("Неправильный формат ограничения по зрению");
-		return;
-	}
-
-	n++;
-	name[n] = Name;
-	limits[n] = Lim;
-	UpdateData();
-}
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::Button6Click(TObject *Sender)
@@ -654,25 +630,6 @@ void __fastcall TForm1::Button6Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm1::Button4Click(TObject *Sender)
-{
-	int ind = ListBox1->ItemIndex;
-	if (ind == -1) {
-		return;
-	}
-	ind++;
-
-	string Lim  = to_string(Edit9->Text);
-
-	if (!validLimitation(Lim)) {
-		ShowMessage("Неправильный формат ограничения по зрению");
-		return;
-	}
-
-	limits[ind] = Lim;
-
-	UpdateData();
-}
 //---------------------------------------------------------------------------
 
 
@@ -688,20 +645,7 @@ void __fastcall TForm1::Button5Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm1::Button7Click(TObject *Sender)
-{
-	int ind = ListBox1->ItemIndex;
-	if (ind == -1) {
-		return;
-	}
-	ind++;
 
-	string Name = to_string(Edit46->Text);
-
-	name[ind] = Name;
-
-	UpdateData();
-}
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::StringGrid1SelectCell(TObject *Sender, int ACol, int ARow,
@@ -713,4 +657,14 @@ void __fastcall TForm1::StringGrid1SelectCell(TObject *Sender, int ACol, int ARo
 	ShowMessage(StringGrid1->Cells[ACol][ARow]);
 }
 //---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::Image1Click(TObject *Sender)
+{
+	ShowMessage("TODO");
+}
+//---------------------------------------------------------------------------
+
+
+
 
