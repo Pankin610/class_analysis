@@ -26,7 +26,7 @@ TForm1 *Form1;
 
 const int N = 55;
 
-int n, friends[N][N], table[N][N], res = 0, best_res = -1000000000;
+int n, friends[N][N], table[N][N], res = 0, best_res = -1000000000, taken_student = -1;
 long long friend_mask[N];
 string name[N], filename;
 bool vis[N], seatable[N][7][4];
@@ -69,6 +69,20 @@ bool validLimitation(string s) {
 		return false;
 	}
 	return true;
+}
+
+void parse(string &s, vector<int> &t) {
+	for (int i = 0; i < s.size(); i++) {
+		if (!(s[i] >= '0' && s[i] <= '9'))
+			continue;
+		int x = 0, j = i;
+		for (; j < s.size() && s[j] >= '0' && s[j] <= '9'; j++) {
+			x = x * 10;
+			x += s[j] - '0';
+		}
+		i = j;
+		t.push_back(x);
+	}
 }
 
 void dfs(int v, vector<int>& cur) {
@@ -316,18 +330,7 @@ void getSeating() {
 	}
 	for (int st = 1; st <= n; st++) {
 		vector<int> t;
-		string s = limits[st];
-		for (int i = 0; i < s.size(); i++) {
-			if (!(s[i] >= '0' && s[i] <= '9'))
-				continue;
-			int x = 0, j = i;
-			for (; j < s.size() && s[j] >= '0' && s[j] <= '9'; j++) {
-				x = x * 10;
-				x += s[j] - '0';
-			}
-			i = j;
-			t.push_back(x);
-		}
+		parse(limits[st], t);
 		for (int x = 1; x <= 6; x++) {
 			for (int y = 1; y <= 3; y++) {
 				seatable[st][x][y] = (x >= t[0] && x <= t[1] && y >= t[2] && y <= t[3]);
@@ -456,8 +459,8 @@ inline void readData() {
 	getline(cin, limits[0]);
 	for (int i = 1; i <= n; i++) {
 		getline(cin, limits[i]);
-		string res = name[i] + " | " + limits[i];
-		Form1->ListBox1->Items->Add(res.c_str());
+		//string res = name[i] + " | " + limits[i];
+		//Form1->ListBox1->Items->Add(res.c_str());
 	}
 
 	/*for (int i = 1; i <= n; i++) {
@@ -486,6 +489,7 @@ void UpdateData() {
         cout << limits[i] << endl;
 	}
 	Form1->ListBox1->Items->Clear();
+	Form1->ListBox2->Items->Clear();
 	for (int i = 0; i <= 36; i++) {
 		for (int j = 0; j <= 36; j++) {
 			Form1->StringGrid1->Cells[j][i] = "";
@@ -504,51 +508,66 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
 
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
-	if (Edit1->Text == "" || Edit2->Text == "" || Edit3->Text == "") {
-		ShowMessage("Неправильный формат ввода.");
-		return;
-	}
-	if (StrToInt(Edit3->Text) < 0 || StrToInt(Edit3->Text) > 10) {
-		ShowMessage("Неправильный формат ввода.");
+	if (taken_student == -1) {
+		ShowMessage("Сначала выберите ученика в таблице слева.");
 		return;
 	}
 
-	string name1, name2;
+	name[taken_student] = to_string(Edit5->Text);
 
-	name1 = to_string(Edit1->Text);
-	name2 = AnsiString(Edit2->Text.c_str()).c_str();
+	string Lim = "";
 
-	int x = 0, y = 0;
-	if (id.find(name1) != id.end()) {
-		x = id[name1];
+	string val = to_string(Edit1->Text);
+	if (val.size() > 1) {
+		ShowMessage("Неправильный формат ввода.");
+		return;
 	}
-	else {
-		for (int i = 0; i < name1.size(); i++) {
-			x = x * 10;
-			x += name1[i] - '0';
-			if (!(name1[i] >= '0' && name1[i] <= '9')) {
-				ShowMessage("Неправильный формат ввода.");
-				return;
-			}
-		}
+	if (!(val[0] >= '1' && val[0] <= '6')) {
+        ShowMessage("Неправильный формат ввода.");
+		return;
 	}
+	Lim = Lim + val[0] + " ";
 
-	if (id.find(name2) != id.end()) {
-		y = id[name2];
+	val = to_string(Edit2->Text);
+	if (val.size() > 1) {
+		ShowMessage("Неправильный формат ввода.");
+		return;
 	}
-	else {
-		for (int i = 0; i < name2.size(); i++) {
-			y = y * 10;
-			y += name2[i] - '0';
-			if (!(name2[i] >= '0' && name2[i] <= '9')) {
-				ShowMessage("Неправильный формат ввода.");
-				return;
-			}
-		}
+	if (!(val[0] >= '1' && val[0] <= '6')) {
+		ShowMessage("Неправильный формат ввода.");
+		return;
 	}
+	Lim = Lim + val[0] + " ";
 
-	table[x][y] = StrToInt(Edit3->Text);
-	UpdateData();
+	val = to_string(Edit3->Text);
+	if (val.size() > 1) {
+		ShowMessage("Неправильный формат ввода.");
+		return;
+	}
+	if (!(val[0] >= '1' && val[0] <= '3')) {
+		ShowMessage("Неправильный формат ввода.");
+		return;
+	}
+	Lim = Lim + val[0] + " ";
+
+	val = to_string(Edit4->Text);
+	if (val.size() > 1) {
+		ShowMessage("Неправильный формат ввода.");
+		return;
+	}
+	if (!(val[0] >= '0' && val[0] <= '3')) {
+		ShowMessage("Неправильный формат ввода.");
+		return;
+	}
+	Lim = Lim + val[0];
+
+	if (Lim[0] > Lim[2] || Lim[4] > Lim[6]) {
+        ShowMessage("Неправильный формат ввода.");
+		return;
+	}
+	limits[taken_student] = Lim;
+
+    UpdateData();
 }
 //---------------------------------------------------------------------------
 
@@ -602,7 +621,6 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-//---------------------------------------------------------------------------
 
 void __fastcall TForm1::Button6Click(TObject *Sender)
 {
@@ -630,9 +648,6 @@ void __fastcall TForm1::Button6Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-//---------------------------------------------------------------------------
-
-
 void __fastcall TForm1::Button5Click(TObject *Sender)
 {
 	output = "";
@@ -645,16 +660,39 @@ void __fastcall TForm1::Button5Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-
-//---------------------------------------------------------------------------
-
 void __fastcall TForm1::StringGrid1SelectCell(TObject *Sender, int ACol, int ARow,
-          bool &CanSelect)
+		  bool &CanSelect)
 {
 	if (ACol != 0 || ARow > n) {
 		return;
 	}
-	ShowMessage(StringGrid1->Cells[ACol][ARow]);
+
+	ListBox1->Items->Clear();
+	ListBox2->Items->Clear();
+
+	string temp = to_string(StringGrid1->Cells[ACol][ARow]);
+	int num = id[temp];
+
+    taken_student = num;
+
+	vector<int> restrictions;
+	parse(limits[num], restrictions);
+
+	Edit1->Text = IntToStr(restrictions[0]);
+	Edit2->Text = IntToStr(restrictions[1]);
+	Edit3->Text = IntToStr(restrictions[2]);
+	Edit4->Text = IntToStr(restrictions[3]);
+
+	Edit5->Text = name[num].c_str();
+
+	for (int i = 1; i <= n; i++) {
+		if (friends[num][i] > 0) {
+			ListBox1->Items->Add(name[i].c_str());
+		}
+		if (friends[num][i] < 0) {
+			ListBox2->Items->Add(name[i].c_str());
+		}
+	}
 }
 //---------------------------------------------------------------------------
 
@@ -667,4 +705,31 @@ void __fastcall TForm1::Image1Click(TObject *Sender)
 
 
 
+
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+	if (Edit6->Text == "") {
+		ShowMessage("Неправильный формат ввода.");
+		return;
+	}
+	if (n == 36) {
+		ShowMessage("Превышен лимит учеников");
+		return;
+	}
+
+	string Lim  = "1 6 1 3";
+	string Name = to_string(Edit6->Text);
+
+	if (!validLimitation(Lim)) {
+		ShowMessage("Неправильный формат ограничения по зрению");
+		return;
+	}
+
+	n++;
+	name[n] = Name;
+	limits[n] = Lim;
+	UpdateData();
+}
+
+//---------------------------------------------------------------------------
 

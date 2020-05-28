@@ -12947,6 +12947,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    OnClick = Button3Click
   end
   object Button5: TButton
     Left = 1424
@@ -13331,6 +13332,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 47
+    OnClick = Button1Click
   end
   object Edit6: TEdit
     Left = 199
