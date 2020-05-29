@@ -97,6 +97,9 @@ __published:	// IDE-managed Components
 	TImage *Image2;
 	TImage *Image3;
 	TImage *Image4;
+	TLabel *Label14;
+	TLabel *Label15;
+	TLabel *Label25;
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall Button2Click(TObject *Sender);

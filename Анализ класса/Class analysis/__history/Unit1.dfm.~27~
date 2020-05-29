@@ -30,7 +30,7 @@ object Form1: TForm1
   end
   object Label10: TLabel
     Left = 32
-    Top = 683
+    Top = 680
     Width = 161
     Height = 14
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1091#1095#1077#1085#1080#1082#1072' '#1089' '#1080#1084#1077#1085#1077#1084
@@ -82,19 +82,19 @@ object Form1: TForm1
   end
   object Label19: TLabel
     Left = 1344
-    Top = 434
+    Top = 490
     Width = 3
     Height = 13
   end
   object Label20: TLabel
-    Left = 1053
-    Top = 586
+    Left = 1344
+    Top = 490
     Width = 3
     Height = 13
   end
   object Label21: TLabel
     Left = 32
-    Top = 664
+    Top = 734
     Width = 3
     Height = 13
   end
@@ -138,11 +138,11 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label27: TLabel
-    Left = 1789
+    Left = 1767
     Top = 729
-    Width = 118
+    Width = 140
     Height = 13
-    Caption = 'vk.com/pashasankin'
+    Caption = 'Telegram: @spdeveloper'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -6606,6 +6606,7 @@ object Form1: TForm1
       FFFF}
     Stretch = True
     Transparent = True
+    OnClick = Image2Click
   end
   object Image3: TImage
     Left = 1246
@@ -11371,6 +11372,7 @@ object Form1: TForm1
       FFFFFFFFFF00}
     Stretch = True
     Transparent = True
+    OnClick = Image3Click
   end
   object Image4: TImage
     Left = 1246
@@ -12919,6 +12921,7 @@ object Form1: TForm1
       FFFF}
     Stretch = True
     Transparent = True
+    OnClick = Image4Click
   end
   object StringGrid1: TStringGrid
     AlignWithMargins = True
@@ -12936,7 +12939,7 @@ object Form1: TForm1
   end
   object Button3: TButton
     Left = 32
-    Top = 703
+    Top = 700
     Width = 75
     Height = 25
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
@@ -13332,6 +13335,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 47
+    OnClick = Button1Click
   end
   object Edit6: TEdit
     Left = 199

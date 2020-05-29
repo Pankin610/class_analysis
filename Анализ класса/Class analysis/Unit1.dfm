@@ -99,7 +99,7 @@ object Form1: TForm1
     Height = 13
   end
   object Label22: TLabel
-    Left = 1811
+    Left = 1807
     Top = 664
     Width = 96
     Height = 13
@@ -112,8 +112,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label23: TLabel
-    Left = 1827
-    Top = 691
+    Left = 1823
+    Top = 723
     Width = 80
     Height = 13
     Caption = #1057#1072#1085#1082#1080#1085' '#1055#1072#1074#1077#1083
@@ -125,8 +125,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label24: TLabel
-    Left = 1755
-    Top = 710
+    Left = 1751
+    Top = 742
     Width = 152
     Height = 13
     Caption = 'spdeveloper90@gmail.com'
@@ -138,8 +138,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label27: TLabel
-    Left = 1767
-    Top = 729
+    Left = 1763
+    Top = 761
     Width = 140
     Height = 13
     Caption = 'Telegram: @spdeveloper'
@@ -12923,16 +12923,54 @@ object Form1: TForm1
     Transparent = True
     OnClick = Image4Click
   end
+  object Label14: TLabel
+    Left = 1735
+    Top = 683
+    Width = 168
+    Height = 13
+    Caption = 'Movie-46-antonio@yandex.ru'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label15: TLabel
+    Left = 1638
+    Top = 803
+    Width = 265
+    Height = 13
+    Caption = #1055#1086#1076#1076#1077#1088#1078#1072#1090#1100' '#1087#1088#1086#1077#1082#1090' '#1095#1077#1088#1077#1079' '#1071#1085#1076#1077#1082#1089' '#1050#1086#1096#1077#1083#1077#1082':'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label25: TLabel
+    Left = 1798
+    Top = 822
+    Width = 105
+    Height = 13
+    Caption = '410016645551711'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object StringGrid1: TStringGrid
     AlignWithMargins = True
     Left = 32
     Top = 72
     Width = 977
     Height = 602
-    ColCount = 37
+    ColCount = 38
     DefaultColWidth = 23
     DefaultRowHeight = 15
-    FixedCols = 0
     RowCount = 37
     TabOrder = 0
     OnSelectCell = StringGrid1SelectCell

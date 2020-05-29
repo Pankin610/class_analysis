@@ -175,7 +175,7 @@ void getMaxClique() {
 	long long res = 0;
 	brute(0, 0, res, ((long long)1 << n) - 1);
 
-	output += "Самая большая кампания друзей (где каждый дружит с каждым): ";
+	output += "Самая большая компания друзей (где каждый дружит с каждым): ";
 	for (int i = 0; i < n; i++) {
 		if (((res >> i) & 1) == 1) {
 			output += name[i + 1];
@@ -391,7 +391,7 @@ void getSeating() {
 	//cout << fixed << setprecision(3) << (double)(clock() - tim) / (double)CLOCKS_PER_SEC << endl;
 
 	seating = best_seating;
-	Form1->Label19->Caption = "Коэфициент дружбы и конфликтности в рассадке: " + IntToStr(-best_res);
+	Form1->Label19->Caption = "Коэффициент дружбы и конфликтности в рассадке: " + IntToStr(-best_res);
 
 	//----------------------------------------------------------------------------------------------
 
@@ -455,18 +455,20 @@ inline void readData() {
 	for (int i = 1; i <= n; i++) {
 		cin >> name[i];
 		id[name[i]] = i;
-		Form1->StringGrid1->Cells[0][i] = name[i].c_str();
-		Form1->StringGrid1->Cells[i][0] = IntToStr(i);
+		Form1->StringGrid1->Cells[0][i] = IntToStr(i);
+		Form1->StringGrid1->Cells[1][i] = name[i].c_str();
+		Form1->StringGrid1->Cells[i + 1][0] = IntToStr(i);
 	}
+    Form1->StringGrid1->Cells[1][0] = "Имя";
 
 	for (int i = 1; i <= n; i++) {
 		for (int j = 1; j <= n; j++) {
 			cin >> friends[i][j];
 			table[i][j] = friends[i][j];
-			Form1->StringGrid1->Cells[j][i] = IntToStr(table[i][j]);
+			Form1->StringGrid1->Cells[j + 1][i] = IntToStr(table[i][j]);
 		}
 	}
-	Form1->StringGrid1->ColWidths[0] = 105;
+	Form1->StringGrid1->ColWidths[1] = 105;
 
 
 	for (int i = 1; i <= n; i++) {
@@ -482,17 +484,7 @@ inline void readData() {
 	getline(cin, limits[0]);
 	for (int i = 1; i <= n; i++) {
 		getline(cin, limits[i]);
-		//string res = name[i] + " | " + limits[i];
-		//Form1->ListBox1->Items->Add(res.c_str());
 	}
-
-	/*for (int i = 1; i <= n; i++) {
-		for (int row = 1; row <= 6; row++) {
-			for (int col = 1; col <= 3; col++) {
-				cin >> seatable[i][row][col];
-			}
-		}
-	}  */
 }
 
 void UpdateData() {
@@ -712,7 +704,7 @@ void __fastcall TForm1::Button5Click(TObject *Sender)
 void __fastcall TForm1::StringGrid1SelectCell(TObject *Sender, int ACol, int ARow,
 		  bool &CanSelect)
 {
-	if (ACol != 0 || ARow > n) {
+	if (ACol != 1 || ARow > n) {
 		return;
 	}
 
