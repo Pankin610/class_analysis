@@ -1,0 +1,115 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.Grids.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Graphics.hpp>
+#include <string>
+
+using namespace std;
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TStringGrid *StringGrid1;
+	TLabel *Label1;
+	TLabel *Label10;
+	TButton *Button3;
+	TButton *Button5;
+	TLabel *Label16;
+	TButton *Button6;
+	TEdit *Edit10;
+	TEdit *Edit11;
+	TEdit *Edit12;
+	TEdit *Edit13;
+	TEdit *Edit14;
+	TEdit *Edit15;
+	TEdit *Edit16;
+	TEdit *Edit17;
+	TEdit *Edit18;
+	TEdit *Edit19;
+	TEdit *Edit20;
+	TEdit *Edit21;
+	TEdit *Edit22;
+	TEdit *Edit23;
+	TEdit *Edit24;
+	TEdit *Edit25;
+	TEdit *Edit26;
+	TEdit *Edit27;
+	TEdit *Edit28;
+	TEdit *Edit29;
+	TEdit *Edit30;
+	TEdit *Edit31;
+	TEdit *Edit32;
+	TEdit *Edit33;
+	TEdit *Edit34;
+	TEdit *Edit35;
+	TEdit *Edit36;
+	TEdit *Edit37;
+	TEdit *Edit38;
+	TEdit *Edit39;
+	TEdit *Edit40;
+	TEdit *Edit41;
+	TEdit *Edit42;
+	TEdit *Edit43;
+	TEdit *Edit44;
+	TEdit *Edit45;
+	TLabel *Label17;
+	TLabel *Label18;
+	TLabel *Label19;
+	TLabel *Label20;
+	TLabel *Label21;
+	TLabel *Label22;
+	TLabel *Label23;
+	TLabel *Label24;
+	TLabel *Label27;
+	TLabel *Label2;
+	TLabel *Label3;
+	TLabel *Label4;
+	TLabel *Label5;
+	TEdit *Edit1;
+	TLabel *Label6;
+	TLabel *Label7;
+	TEdit *Edit2;
+	TLabel *Label8;
+	TEdit *Edit3;
+	TLabel *Label9;
+	TLabel *Label11;
+	TEdit *Edit4;
+	TEdit *Edit5;
+	TLabel *Label12;
+	TListBox *ListBox1;
+	TLabel *Label13;
+	TListBox *ListBox2;
+	TButton *Button1;
+	TEdit *Edit6;
+	TImage *Image1;
+	TImage *Image2;
+	TImage *Image3;
+	TImage *Image4;
+	void __fastcall FormCreate(TObject *Sender);
+	void __fastcall Button1Click(TObject *Sender);
+	void __fastcall Button2Click(TObject *Sender);
+	void __fastcall Button6Click(TObject *Sender);
+	void __fastcall Button5Click(TObject *Sender);
+	void __fastcall StringGrid1SelectCell(TObject *Sender, int ACol, int ARow, bool &CanSelect);
+	void __fastcall Image1Click(TObject *Sender);
+	void __fastcall Button3Click(TObject *Sender);
+
+
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm1(TComponent* Owner);
+	inline string to_string(String x);
+	int getStudentId(string &s);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif

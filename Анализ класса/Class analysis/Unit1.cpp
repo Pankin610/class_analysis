@@ -19,6 +19,7 @@ using namespace std;
 #pragma hdrstop
 
 #include "Unit1.h"
+#include "Unit2.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -42,7 +43,7 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 }
 //---------------------------------------------------------------------------
 
-inline string to_string(String x) {
+string to_string(String x) {
 	return AnsiString(x.c_str()).c_str();
 }
 
@@ -69,6 +70,28 @@ bool validLimitation(string s) {
 		return false;
 	}
 	return true;
+}
+
+int getStudentId(string s) {
+	int x = -1;
+	if (id.find(s) != id.end()) {
+		x = id[s];
+	}
+	else {
+		x = 0;
+		for (int i = 0; i < s.size(); i++) {
+			x = x * 10;
+			x += s[i] - '0';
+			if (!(s[i] >= '0' && s[i] <= '9')) {
+				x = -1;
+				break;
+			}
+		}
+		if (x < 1 || x > n) {
+			x = -1;
+		}
+	}
+	return x;
 }
 
 void parse(string &s, vector<int> &t) {
@@ -325,7 +348,7 @@ void getSeating() {
 
 	for (int i = 1; i <= n; i++) {
 		for (int j = 1; j <= n; j++) {
-			friends[i][j] = -friends[i][j];
+			friends[i][j] = -abs(friends[i][j]);
 		}
 	}
 	for (int st = 1; st <= n; st++) {
@@ -352,7 +375,7 @@ void getSeating() {
 			n--;
         for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
-				friends[i][j] = -friends[i][j];
+				friends[i][j] = min(table[i][j], table[j][i]);
 			}
 		}
 		Form1->Label19->Caption = "Рассадки, удовлетворяющей вашим требованиям, не существует.";
@@ -368,7 +391,7 @@ void getSeating() {
 	//cout << fixed << setprecision(3) << (double)(clock() - tim) / (double)CLOCKS_PER_SEC << endl;
 
 	seating = best_seating;
-	Form1->Label19->Caption = "Коэфициент дружбы в рассадке: " + IntToStr(-best_res);
+	Form1->Label19->Caption = "Коэфициент дружбы и конфликтности в рассадке: " + IntToStr(-best_res);
 
 	//----------------------------------------------------------------------------------------------
 
@@ -418,7 +441,7 @@ void getSeating() {
 
 	for (int i = 1; i <= n; i++) {
 		for (int j = 1; j <= n; j++) {
-			friends[i][j] = -friends[i][j];
+			friends[i][j] = min(table[i][j], table[j][i]);
 		}
 	}
 	while (name[n] == "Пустое место")
@@ -498,6 +521,32 @@ void UpdateData() {
 	fill(friend_mask, friend_mask + N, 0);
 	id.clear();
 	readData();
+
+	Form1->ListBox1->Items->Clear();
+	Form1->ListBox2->Items->Clear();
+
+	if (taken_student == -1) {
+		return;
+	}
+
+    vector<int> restrictions;
+	parse(limits[taken_student], restrictions);
+
+	Form1->Edit1->Text = IntToStr(restrictions[0]);
+	Form1->Edit2->Text = IntToStr(restrictions[1]);
+	Form1->Edit3->Text = IntToStr(restrictions[2]);
+	Form1->Edit4->Text = IntToStr(restrictions[3]);
+
+	Form1->Edit5->Text = name[taken_student].c_str();
+
+	for (int i = 1; i <= n; i++) {
+		if (table[taken_student][i] > 0) {
+			Form1->ListBox1->Items->Add(name[i].c_str());
+		}
+		if (table[taken_student][i] < 0) {
+			Form1->ListBox2->Items->Add(name[i].c_str());
+		}
+	}
 }
 
 void __fastcall TForm1::FormCreate(TObject *Sender)
@@ -667,39 +716,25 @@ void __fastcall TForm1::StringGrid1SelectCell(TObject *Sender, int ACol, int ARo
 		return;
 	}
 
-	ListBox1->Items->Clear();
-	ListBox2->Items->Clear();
-
 	string temp = to_string(StringGrid1->Cells[ACol][ARow]);
 	int num = id[temp];
 
-    taken_student = num;
-
-	vector<int> restrictions;
-	parse(limits[num], restrictions);
-
-	Edit1->Text = IntToStr(restrictions[0]);
-	Edit2->Text = IntToStr(restrictions[1]);
-	Edit3->Text = IntToStr(restrictions[2]);
-	Edit4->Text = IntToStr(restrictions[3]);
-
-	Edit5->Text = name[num].c_str();
-
-	for (int i = 1; i <= n; i++) {
-		if (friends[num][i] > 0) {
-			ListBox1->Items->Add(name[i].c_str());
-		}
-		if (friends[num][i] < 0) {
-			ListBox2->Items->Add(name[i].c_str());
-		}
-	}
+	taken_student = num;
+	UpdateData();
 }
 //---------------------------------------------------------------------------
 
 
 void __fastcall TForm1::Image1Click(TObject *Sender)
 {
-	ShowMessage("TODO");
+	if (taken_student == -1) {
+		ShowMessage("Сначала выберите ученика в таблице слева.");
+		return;
+	}
+	Form2->ShowModal();
+
+	table[taken_student][getStudentId(to_string(Form2->Edit1->Text))] = 1;
+	UpdateData();
 }
 //---------------------------------------------------------------------------
 
@@ -731,5 +766,50 @@ void __fastcall TForm1::Button3Click(TObject *Sender)
 	UpdateData();
 }
 
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image3Click(TObject *Sender)
+{
+	if (taken_student == -1) {
+		ShowMessage("Сначала выберите ученика в таблице слева.");
+		return;
+	}
+	Form2->ShowModal();
+
+	table[taken_student][getStudentId(to_string(Form2->Edit1->Text))] = -1;
+	UpdateData();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image2Click(TObject *Sender)
+{
+	if (taken_student == -1) {
+		ShowMessage("Сначала выберите ученика в таблице слева.");
+		return;
+	}
+	if (ListBox1->ItemIndex == -1) {
+		ShowMessage("Сначала выберите ученика, которого хотите удалить.");
+		return;
+	}
+	int fr = id[to_string(ListBox1->Items->Strings[ListBox1->ItemIndex])];
+	table[taken_student][fr] = 0;
+	UpdateData();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Image4Click(TObject *Sender)
+{
+    if (taken_student == -1) {
+		ShowMessage("Сначала выберите ученика в таблице слева.");
+		return;
+	}
+	if (ListBox2->ItemIndex == -1) {
+		ShowMessage("Сначала выберите ученика, которого хотите удалить.");
+		return;
+	}
+	int fr = id[to_string(ListBox2->Items->Strings[ListBox2->ItemIndex])];
+	table[taken_student][fr] = 0;
+	UpdateData();
+}
 //---------------------------------------------------------------------------
 
