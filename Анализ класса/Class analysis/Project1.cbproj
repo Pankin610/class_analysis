@@ -158,8 +158,15 @@
             <DependentOn>Unit2.h</DependentOn>
             <BuildOrder>3</BuildOrder>
         </CppCompile>
+        <CppCompile Include="Unit3.cpp">
+            <Form>Form3</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>Unit3.h</DependentOn>
+            <BuildOrder>4</BuildOrder>
+        </CppCompile>
         <FormResources Include="Unit2.dfm"/>
         <FormResources Include="Unit1.dfm"/>
+        <FormResources Include="Unit3.dfm"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

@@ -67,8 +67,6 @@ __published:	// IDE-managed Components
 	TLabel *Label17;
 	TLabel *Label18;
 	TLabel *Label19;
-	TLabel *Label20;
-	TLabel *Label21;
 	TLabel *Label22;
 	TLabel *Label23;
 	TLabel *Label24;
@@ -100,6 +98,7 @@ __published:	// IDE-managed Components
 	TLabel *Label14;
 	TLabel *Label15;
 	TLabel *Label25;
+	TButton *Button2;
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall Button2Click(TObject *Sender);

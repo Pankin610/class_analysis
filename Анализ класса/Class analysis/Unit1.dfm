@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   Caption = #1040#1085#1072#1083#1080#1079' '#1082#1083#1072#1089#1089#1072
   ClientHeight = 1061
-  ClientWidth = 1919
+  ClientWidth = 1687
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,6 +12,7 @@ object Form1: TForm1
   Font.Style = []
   OldCreateOrder = False
   Position = poDesigned
+  Scaled = False
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -82,25 +83,19 @@ object Form1: TForm1
   end
   object Label19: TLabel
     Left = 1344
-    Top = 490
-    Width = 3
-    Height = 13
-  end
-  object Label20: TLabel
-    Left = 1344
-    Top = 490
-    Width = 3
-    Height = 13
-  end
-  object Label21: TLabel
-    Left = 32
-    Top = 734
-    Width = 3
-    Height = 13
+    Top = 551
+    Width = 100
+    Height = 10
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object Label22: TLabel
-    Left = 1807
-    Top = 664
+    Left = 1583
+    Top = 661
     Width = 96
     Height = 13
     Caption = #1040#1085#1090#1086#1085' '#1040#1084#1077#1083#1080#1095#1077#1074
@@ -112,8 +107,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label23: TLabel
-    Left = 1823
-    Top = 723
+    Left = 1599
+    Top = 720
     Width = 80
     Height = 13
     Caption = #1057#1072#1085#1082#1080#1085' '#1055#1072#1074#1077#1083
@@ -125,8 +120,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label24: TLabel
-    Left = 1751
-    Top = 742
+    Left = 1527
+    Top = 739
     Width = 152
     Height = 13
     Caption = 'spdeveloper90@gmail.com'
@@ -138,8 +133,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label27: TLabel
-    Left = 1763
-    Top = 761
+    Left = 1539
+    Top = 758
     Width = 140
     Height = 13
     Caption = 'Telegram: @spdeveloper'
@@ -12924,8 +12919,8 @@ object Form1: TForm1
     OnClick = Image4Click
   end
   object Label14: TLabel
-    Left = 1735
-    Top = 683
+    Left = 1511
+    Top = 680
     Width = 168
     Height = 13
     Caption = 'Movie-46-antonio@yandex.ru'
@@ -12937,8 +12932,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label15: TLabel
-    Left = 1638
-    Top = 803
+    Left = 1414
+    Top = 800
     Width = 265
     Height = 13
     Caption = #1055#1086#1076#1076#1077#1088#1078#1072#1090#1100' '#1087#1088#1086#1077#1082#1090' '#1095#1077#1088#1077#1079' '#1071#1085#1076#1077#1082#1089' '#1050#1086#1096#1077#1083#1077#1082':'
@@ -12950,8 +12945,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label25: TLabel
-    Left = 1798
-    Top = 822
+    Left = 1574
+    Top = 819
     Width = 105
     Height = 13
     Caption = '410016645551711'
@@ -12992,10 +12987,10 @@ object Form1: TForm1
   end
   object Button5: TButton
     Left = 1424
-    Top = 435
+    Top = 441
     Width = 161
     Height = 49
-    Caption = #1054#1073#1085#1086#1074#1080#1090#1100' '#1088#1072#1089#1089#1072#1076#1082#1091' '#1080' '#1075#1088#1072#1092#1086#1074#1099#1081' '#1072#1085#1072#1083#1080#1079' '#1082#1083#1072#1089#1089#1072
+    Caption = #1057#1075#1077#1085#1077#1088#1080#1088#1086#1074#1072#1090#1100' '#1088#1072#1089#1089#1072#1076#1082#1091' '#1082#1083#1072#1089#1089#1072
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
@@ -13024,289 +13019,505 @@ object Form1: TForm1
   object Edit10: TEdit
     Left = 1344
     Top = 72
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 4
   end
   object Edit11: TEdit
     Left = 1344
     Top = 96
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 5
   end
   object Edit12: TEdit
     Left = 1456
     Top = 72
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 6
   end
   object Edit13: TEdit
     Left = 1456
     Top = 96
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 7
   end
   object Edit14: TEdit
     Left = 1568
     Top = 72
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 8
   end
   object Edit15: TEdit
     Left = 1568
     Top = 96
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 9
   end
   object Edit16: TEdit
     Left = 1344
     Top = 136
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 10
   end
   object Edit17: TEdit
     Left = 1344
     Top = 160
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 11
   end
   object Edit18: TEdit
     Left = 1456
     Top = 136
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 12
   end
   object Edit19: TEdit
     Left = 1456
     Top = 160
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 13
   end
   object Edit20: TEdit
     Left = 1568
     Top = 136
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 14
   end
   object Edit21: TEdit
     Left = 1568
     Top = 160
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 15
   end
   object Edit22: TEdit
     Left = 1344
     Top = 197
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 16
   end
   object Edit23: TEdit
     Left = 1344
     Top = 221
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 17
   end
   object Edit24: TEdit
     Left = 1456
     Top = 197
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 18
   end
   object Edit25: TEdit
     Left = 1456
     Top = 221
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 19
   end
   object Edit26: TEdit
     Left = 1568
     Top = 197
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 20
   end
   object Edit27: TEdit
     Left = 1568
     Top = 221
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 21
   end
   object Edit28: TEdit
     Left = 1344
     Top = 261
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 22
   end
   object Edit29: TEdit
     Left = 1344
     Top = 285
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 23
   end
   object Edit30: TEdit
     Left = 1456
     Top = 261
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 24
   end
   object Edit31: TEdit
     Left = 1456
     Top = 285
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 25
   end
   object Edit32: TEdit
     Left = 1568
     Top = 261
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 26
   end
   object Edit33: TEdit
     Left = 1568
     Top = 285
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 27
   end
   object Edit34: TEdit
     Left = 1344
     Top = 320
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 28
   end
   object Edit35: TEdit
     Left = 1344
     Top = 344
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 29
   end
   object Edit36: TEdit
     Left = 1456
     Top = 320
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 30
   end
   object Edit37: TEdit
     Left = 1456
     Top = 344
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 31
   end
   object Edit38: TEdit
     Left = 1568
     Top = 320
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 32
   end
   object Edit39: TEdit
     Left = 1568
     Top = 344
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 33
   end
   object Edit40: TEdit
     Left = 1344
     Top = 384
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 34
   end
   object Edit41: TEdit
     Left = 1344
     Top = 408
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 35
   end
   object Edit42: TEdit
     Left = 1456
     Top = 384
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 36
   end
   object Edit43: TEdit
     Left = 1456
     Top = 408
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 37
   end
   object Edit44: TEdit
     Left = 1568
     Top = 384
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 38
   end
   object Edit45: TEdit
     Left = 1568
     Top = 408
-    Width = 97
-    Height = 21
+    Width = 108
+    Height = 27
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 39
   end
   object Edit1: TEdit
@@ -13381,5 +13592,21 @@ object Form1: TForm1
     Width = 173
     Height = 21
     TabOrder = 48
+  end
+  object Button2: TButton
+    Left = 1424
+    Top = 496
+    Width = 161
+    Height = 49
+    Caption = #1055#1086#1089#1084#1086#1090#1088#1077#1090#1100' '#1072#1085#1072#1083#1080#1079' '#1076#1088#1091#1078#1073#1099
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 49
+    WordWrap = True
+    OnClick = Button2Click
   end
 end

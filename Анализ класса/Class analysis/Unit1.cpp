@@ -20,6 +20,7 @@ using namespace std;
 
 #include "Unit1.h"
 #include "Unit2.h"
+#include "Unit3.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -608,57 +609,17 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 	}
 	limits[taken_student] = Lim;
 
-    UpdateData();
+	UpdateData();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::Button2Click(TObject *Sender)
 {
-	if (Edit4->Text == "" || Edit5->Text == "" || Edit6->Text == "") {
-		ShowMessage("Неправильный формат ввода.");
-		return;
-	}
-	if (StrToInt(Edit6->Text) < 0 || StrToInt(Edit6->Text) > 10) {
-		ShowMessage("Неправильный формат ввода.");
-		return;
-	}
-
-	string name1, name2;
-
-	name1 = AnsiString(Edit4->Text.c_str()).c_str();
-	name2 = AnsiString(Edit5->Text.c_str()).c_str();
-
-	int x = 0, y = 0;
-	if (id.find(name1) != id.end()) {
-		x = id[name1];
-	}
-	else {
-		for (int i = 0; i < name1.size(); i++) {
-			x = x * 10;
-			x += name1[i] - '0';
-			if (!(name1[i] >= '0' && name1[i] <= '9')) {
-				ShowMessage("Неправильный формат ввода.");
-				return;
-			}
-		}
-	}
-
-	if (id.find(name2) != id.end()) {
-		y = id[name2];
-	}
-	else {
-		for (int i = 0; i < name2.size(); i++) {
-			y = y * 10;
-			y += name2[i] - '0';
-			if (!(name2[i] >= '0' && name2[i] <= '9')) {
-				ShowMessage("Неправильный формат ввода.");
-				return;
-			}
-		}
-	}
-
-	table[x][y] = table[y][x] = StrToInt(Edit6->Text);
-	UpdateData();
+    output = "";
+	getIndependantGroups();
+	getMaxClique();
+	Form3->Label1->Caption = output.c_str();
+    Form3->ShowModal();
 }
 //---------------------------------------------------------------------------
 
@@ -692,12 +653,8 @@ void __fastcall TForm1::Button6Click(TObject *Sender)
 void __fastcall TForm1::Button5Click(TObject *Sender)
 {
 	output = "";
-	Form1->Label20->Caption = "Подождите несколько секунд...";
-	getIndependantGroups();
-	getMaxClique();
+	Label19->Caption = "Подождите несколько секунд...";
 	getSeating();
-	Form1->Label20->Caption = "";
-	Label21->Caption = output.c_str();
 }
 //---------------------------------------------------------------------------
 

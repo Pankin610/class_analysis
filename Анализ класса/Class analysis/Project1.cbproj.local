@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.110,C:\Users\Pavel Sankin\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=D:\Анализ класса\Class analysis\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.379,=C:\Users\Pavel Sankin\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.612,C:\Users\Pavel Sankin\Documents\Embarcadero\Studio\Projects\Unit1.cpp=D:\Анализ класса\Class analysis\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.612,D:\Анализ класса\Class analysis\Unit1.dfm=C:\Users\Pavel Sankin\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.612,D:\Анализ класса\Class analysis\Unit1.h=C:\Users\Pavel Sankin\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.612,D:\Анализ класса\Class analysis\Unit1.cpp=C:\Users\Pavel Sankin\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.780,=C:\Users\Pavel Sankin\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.379,=C:\Users\Pavel Sankin\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.293,D:\Анализ класса\Class analysis\Project1.cbproj=C:\Users\Pavel Sankin\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.297,=D:\class_analysis\Анализ класса\Class analysis\Unit2.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.612,C:\Users\Pavel Sankin\Documents\Embarcadero\Studio\Projects\Unit1.h=D:\Анализ класса\Class analysis\Unit1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.612,C:\Users\Pavel Sankin\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\Анализ класса\Class analysis\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.293,C:\Users\Pavel Sankin\Documents\Embarcadero\Studio\Projects\Project1.cbproj=D:\Анализ класса\Class analysis\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.110,D:\Анализ класса\Class analysis\Project1PCH1.h=C:\Users\Pavel Sankin\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2020.06.04 18:25:04.069,=D:\class_analysis\Анализ класса\Class analysis\Unit3.cpp</Transaction>
   </Transactions>
 </BorlandProject>
